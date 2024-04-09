@@ -108,7 +108,7 @@ console.log(sumAll([]));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function allPositive(inputArray) {
-  const positiveNumbers = []; // Initialize an empty array to store positive numbers
+  const positiveNumbers = [];
 
   for (let i = 0; i < inputArray.length; i++) {
     if (inputArray[i] > 0) {
@@ -118,7 +118,6 @@ function allPositive(inputArray) {
 
   return positiveNumbers;
 }
-// let positiveNumbers = ['-1', '1', '-2', '2', '-3', '3']
 console.log(allPositive([-1, 1, -2, 2, -3, 3]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
