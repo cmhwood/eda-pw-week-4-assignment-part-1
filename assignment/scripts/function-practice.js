@@ -84,7 +84,7 @@ function isFirstLetter(letter, string) {
   if (string.length === 0) {
     return false;
   }
-  return string.charAt(0) === letter; 
+  return string.charAt(0) === letter;
 }
 let words = 'Hello World';
 console.log(isFirstLetter('H', words));
@@ -95,18 +95,49 @@ console.log(isFirstLetter('', words));
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
   // TODO: return the sum
+  return sum;
 }
+console.log(sumAll([1, 2, 3, 4, 5]));
+console.log(sumAll([]));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {}
+function allPositive(inputArray) {
+  const positiveNumbers = []; // Initialize an empty array to store positive numbers
+
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] > 0) {
+      positiveNumbers.push(inputArray[i]);
+    }
+  }
+
+  return positiveNumbers;
+}
+// let positiveNumbers = ['-1', '1', '-2', '2', '-3', '3']
+console.log(allPositive([-1, 1, -2, 2, -3, 3]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+// Create a function that takes the age in years and returns the age in days.
+// Examples
+// calcAge(65) ➞ 23725
+// calcAge(0) ➞ 0
+// calcAge(20) ➞ 7300
+// Notes
+// Use 365 days as the length of a year for this challenge.
+// Ignore leap years and days between last birthday and now.
+// Expect only positive integer inputs.
+
+function calcAge(age) {
+  return age * 365;
+}
+console.log(calcAge(45));
 
 // DO NOT MODIFY
 // Used for automated testing
